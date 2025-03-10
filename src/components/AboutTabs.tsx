@@ -34,7 +34,7 @@ const AboutTabs = () => {
     {
       name: "Ogoochukwu Jonnwakalo",
       role: "Team Lead",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      image: "https://i.ibb.co/fdhFfsSb/ogoo.jpg",
       socials: [
         { type: "github", url: "https://github.com/" },
         { type: "linkedin", url: "https://linkedin.com/" }
@@ -43,7 +43,7 @@ const AboutTabs = () => {
     {
       name: "Alima Umwiza",
       role: "Reporter/Presenter",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      image: "https://i.ibb.co/5gkPML8Q/al.png",
       socials: [
         { type: "github", url: "https://github.com/" },
         { type: "linkedin", url: "https://linkedin.com/" }
@@ -52,7 +52,7 @@ const AboutTabs = () => {
     {
       name: "Celyse Ishimwe",
       role: "Communication Lead",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      image: "https://i.ibb.co/21538QQb/celyse.png",
       socials: [
         { type: "github", url: "https://github.com/" },
         { type: "linkedin", url: "https://linkedin.com/" }
@@ -61,7 +61,7 @@ const AboutTabs = () => {
     {
       name: "Mathew Avhiokhode",
       role: "Research Lead",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      image: "https://i.ibb.co/YF8pcWjb/matt.jpg",
       socials: [
         { type: "github", url: "https://github.com/" },
         { type: "linkedin", url: "https://linkedin.com/" },
@@ -71,7 +71,7 @@ const AboutTabs = () => {
     {
       name: "Erioluwa Olowoyo",
       role: "Design Lead",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      image: "https://i.ibb.co/YFm5z0Rp/ERIOLUWA-1.png",
       socials: [
         { type: "github", url: "https://github.com/" },
         { type: "linkedin", url: "https://linkedin.com/" },
@@ -105,7 +105,7 @@ const AboutTabs = () => {
           <div className="space-y-8">
             <div className="text-center max-w-3xl mx-auto mb-8">
               <p className="text-xl text-gray-700">
-                Pan-African Techpreneurs united by a shared mission to transform Rwanda's public transport system.
+                Visionary Techpreneurs united by a shared mission to empower style expression and foster creative jobs through outfit design.
               </p>
             </div>
             
@@ -197,10 +197,7 @@ const AboutTabs = () => {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
-                In Rwanda, public transport is a lifeline for many, with over 40% of people depending on buses to get around. 
-                Unfortunately, the current ticketing system leads to long waits and crowded bus stations, making daily journeys 
-                stressful and time-consuming. To make things easier we need a fresh, tech-driven approach to streamline the system 
-                and ensure a smoother, more efficient ride for everyone.
+                Nigeria faces a critical unemployment crisis, with youth unemployment at 42% and overall rates fluctuating between 3.07% in early 2023 and 5.3% in early 2024. This issue is worsened by economic downturns like the COVID-19 pandemic, skill mismatches, and a reliance on informal sector jobs. To address this challenge, urgent interventions are needed to align vocational training with industry demands, enhance job-relevant education, and promote entrepreneurship. By equipping the workforce with relevant skills and fostering business development, Nigeria can create sustainable employment opportunities, reduce poverty, and drive long-term economic growth, By 2030.
               </p>
               <div className="mt-6">
                 <Button variant="outline" className="mt-4">
@@ -210,8 +207,8 @@ const AboutTabs = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-md">
               <img 
-                src="public/lovable-uploads/518929ae-196b-490b-be1f-9901c482ea72.png" 
-                alt="Public transport challenges in Rwanda" 
+                src="https://www.signalng.com/wp-content/uploads/unemployment-in-africa.jpg" 
+                alt="Nigeria's Unemployment Crisis Worsens" 
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -222,8 +219,7 @@ const AboutTabs = () => {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="space-y-4 order-2 md:order-1">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our Mission is to transform public transportation in Rwanda through innovative software solutions, enhancing 
-                accessibility and creating a seamless, efficient transport network.
+                Our mission is to empower individuals to express their unique style through a platform for designing dream outfits, while simultaneously fostering job creation in the creative sector and building a vibrant community of talented designers.
               </p>
               <div className="mt-6">
                 <Button className="mt-4">
@@ -233,7 +229,7 @@ const AboutTabs = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-md order-1 md:order-2">
               <img 
-                src="public/lovable-uploads/a78f5b9e-30e6-46a2-96ca-3f337518e170.png" 
+                src="https://thumbs.dreamstime.com/b/young-black-fashion-designer-discussing-purchase-client-phone-cheerful-african-american-fashion-designer-talking-phone-156515586.jpg" 
                 alt="Our mission" 
                 className="w-full h-auto object-cover"
               />
