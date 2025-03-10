@@ -48,8 +48,8 @@ const Index = () => {
         <AboutTabs />
         {/* <AboutSection /> */}
         <ProjectsSection />
-        <TeamSection />
-        <ContactSection />
+        {/* <TeamSection /> */}
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>
