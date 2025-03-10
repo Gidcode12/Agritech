@@ -67,6 +67,16 @@ const AboutTabs = () => {
         { type: "linkedin", url: "https://linkedin.com/" },
         { type: "mail", url: "mailto:example@example.com" }
       ]
+    },
+    {
+      name: "Sarah Johnson",
+      role: "Design Lead",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
+      socials: [
+        { type: "github", url: "https://github.com/" },
+        { type: "linkedin", url: "https://linkedin.com/" },
+        { type: "mail", url: "mailto:sarah@example.com" }
+      ]
     }
   ];
 
@@ -99,37 +109,74 @@ const AboutTabs = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="relative w-32 h-32 overflow-hidden rounded-full border-2 border-primary/10">
-                      <img 
-                        src={member.image} 
-                        alt={member.name} 
-                        className="w-full h-full object-cover"
-                      />
+            <div className="flex flex-col items-center">
+              {/* First row with 3 team members */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-6 w-full max-w-5xl">
+                {teamMembers.slice(0, 3).map((member, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div className="flex justify-center mb-4">
+                      <div className="relative w-32 h-32 overflow-hidden rounded-full border-2 border-primary/10">
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <p className="text-gray-500 mb-4">{member.role}</p>
+                    <div className="flex justify-center gap-3">
+                      {member.socials.map((social, sIndex) => (
+                        <a 
+                          key={sIndex} 
+                          href={social.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-gray-400 hover:text-primary transition-colors"
+                        >
+                          {social.type === "github" && <Github className="w-5 h-5" />}
+                          {social.type === "linkedin" && <Linkedin className="w-5 h-5" />}
+                          {social.type === "mail" && <Mail className="w-5 h-5" />}
+                        </a>
+                      ))}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-gray-500 mb-4">{member.role}</p>
-                  <div className="flex justify-center gap-3">
-                    {member.socials.map((social, sIndex) => (
-                      <a 
-                        key={sIndex} 
-                        href={social.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-gray-400 hover:text-primary transition-colors"
-                      >
-                        {social.type === "github" && <Github className="w-5 h-5" />}
-                        {social.type === "linkedin" && <Linkedin className="w-5 h-5" />}
-                        {social.type === "mail" && <Mail className="w-5 h-5" />}
-                      </a>
-                    ))}
+                ))}
+              </div>
+              
+              {/* Second row with 2 team members (centered) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
+                {teamMembers.slice(3, 5).map((member, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+                    <div className="flex justify-center mb-4">
+                      <div className="relative w-32 h-32 overflow-hidden rounded-full border-2 border-primary/10">
+                        <img 
+                          src={member.image} 
+                          alt={member.name} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+                    <p className="text-gray-500 mb-4">{member.role}</p>
+                    <div className="flex justify-center gap-3">
+                      {member.socials.map((social, sIndex) => (
+                        <a 
+                          key={sIndex} 
+                          href={social.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-gray-400 hover:text-primary transition-colors"
+                        >
+                          {social.type === "github" && <Github className="w-5 h-5" />}
+                          {social.type === "linkedin" && <Linkedin className="w-5 h-5" />}
+                          {social.type === "mail" && <Mail className="w-5 h-5" />}
+                        </a>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         );
