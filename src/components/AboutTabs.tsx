@@ -32,7 +32,7 @@ const AboutTabs = () => {
 
   const teamMembers = [
     {
-      name: "Honourgod K. Levison",
+      name: "Ogoochukwu Jonnwakalo",
       role: "Team Lead",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       socials: [
@@ -41,7 +41,7 @@ const AboutTabs = () => {
       ]
     },
     {
-      name: "Lineo Sylvia Muso",
+      name: "Alima Umwiza",
       role: "Reporter/Presenter",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       socials: [
@@ -50,7 +50,7 @@ const AboutTabs = () => {
       ]
     },
     {
-      name: "Rwema Christian",
+      name: "Celyse Ishimwe",
       role: "Communication Lead",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       socials: [
@@ -59,7 +59,7 @@ const AboutTabs = () => {
       ]
     },
     {
-      name: "Chiagoziem Eke",
+      name: "Mathew Avhiokhode",
       role: "Research Lead",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       socials: [
@@ -69,7 +69,7 @@ const AboutTabs = () => {
       ]
     },
     {
-      name: "Sarah Johnson",
+      name: "Erioluwa Olowoyo",
       role: "Design Lead",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       socials: [
