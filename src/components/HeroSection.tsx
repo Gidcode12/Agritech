@@ -6,7 +6,7 @@ const HeroSection = () => {
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-  return <section id="hero" className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+  return <section id="hero" className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden py-[132px]">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl opacity-50" />
@@ -39,30 +39,30 @@ const HeroSection = () => {
         </div>
 
         {/* Feature cards
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 md:mt-16">
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 md:mt-16">
           {[{
           icon: <Brain size={24} />,
           title: "Innovative Thinking",
           description: "Fostering creative approaches to Africa's most pressing challenges.",
           delay: "animation-delay-400"
-        }, {
+         }, {
           icon: <Lightbulb size={24} />,
           title: "Knowledge Exchange",
           description: "Creating platforms for cross-disciplinary collaboration and learning.",
           delay: "animation-delay-500"
-        }, {
+         }, {
           icon: <BarChart3 size={24} />,
           title: "Impact Focused",
           description: "Committed to scalable solutions with measurable results.",
           delay: "animation-delay-700"
-        }].map((feature, i) => <div key={i} className={`glass-panel rounded-2xl p-8 transform transition-all duration-500 hover:translate-y-[-8px] opacity-0 ${isLoaded ? `animate-fade-up ${feature.delay}` : ''}`}>
+         }].map((feature, i) => <div key={i} className={`glass-panel rounded-2xl p-8 transform transition-all duration-500 hover:translate-y-[-8px] opacity-0 ${isLoaded ? `animate-fade-up ${feature.delay}` : ''}`}>
               <div className="bg-primary/10 p-3 rounded-xl w-fit mb-4 text-primary">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>)}
-        </div> */}
+         </div> */}
       </div>
     </section>;
 };
