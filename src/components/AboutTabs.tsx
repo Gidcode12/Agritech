@@ -84,17 +84,17 @@ const AboutTabs = () => {
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: "Creativity",
-      description: "Our spirit for innovation fuels us to find unique solutions for the challenges in the transport system."
+      description: "Innovation in design is at our core, driving us to provide unique and expressive outfit solutions."
     },
     {
       icon: <Users2 className="w-8 h-8" />,
       title: "Teamwork",
-      description: "We achieve our goals through strong collaboration and mutual support."
+      description: "Collaboration is key to our success, together we build a strong and supportive design focused community."
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Pan-Africanism",
-      description: "We thrive and draw strength from our diverse backgrounds, skills and experiences."
+      description: "We build an inclusive community that values and celebrates the diverse creative expression of all of our members."
     }
   ];
 
