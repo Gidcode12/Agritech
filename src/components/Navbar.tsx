@@ -34,7 +34,7 @@ const Navbar = () => {
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-apple ${scrolled ? 'py-4 bg-white/80 backdrop-blur-xl border-b border-black/5 shadow-sm' : 'py-6 bg-transparent'}`}>
       <div className="section-container flex items-center justify-between py-0">
         <Link to="/" className="text-xl md:text-2xl font-bold flex items-center opacity-90 hover:opacity-100 transition-opacity">
-          <span className="gradient-text font-display tracking-tight">ThinkTank</span>
+          <span className="gradient-text font-display tracking-tight">Visionary Executors</span>
         </Link>
 
         {/* Desktop Navigation */}
