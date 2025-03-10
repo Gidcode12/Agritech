@@ -17,15 +17,15 @@ const HeroSection = () => {
       <div className="section-container relative z-10 my-0 py-0">
         <div className="flex flex-col items-center text-center mb-12 md:mb-16">
           <div className={`glass-panel px-4 py-2 rounded-full mb-6 opacity-0 ${isLoaded ? 'animate-fade-down' : ''}`}>
-            <span className="text-sm font-medium text-primary/90">ALU's Premier Innovation Initiative</span>
+            <span className="text-sm font-medium text-primary/90">V_Ex Innovation Initiative</span>
           </div>
           
           <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold max-w-3xl mb-6 opacity-0 ${isLoaded ? 'animate-fade-up' : ''}`}>
-            Where <span className="gradient-text">African Ideas</span> Become Global Solutions
+            Creating the Future, <span className="gradient-text">One Solution</span> at a time
           </h1>
           
-          <p className={`text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 opacity-0 ${isLoaded ? 'animate-fade-up animation-delay-200' : ''}`}>
-            ThinkTank is a collaborative innovation hub at African Leadership University focused on solving complex problems through interdisciplinary research and development.
+          <p className={`text-lg md:text-ml text-muted-foreground max-w-2xl mb-8 opacity-0 ${isLoaded ? 'animate-fade-up animation-delay-200' : ''}`}>
+           Empowering style expression through outfit design, fostering creative jobs, and building a designer community.
           </p>
           
           <div className={`flex flex-col sm:flex-row items-center gap-4 opacity-0 ${isLoaded ? 'animate-fade-up animation-delay-300' : ''}`}>
