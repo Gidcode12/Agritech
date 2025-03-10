@@ -38,7 +38,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Feature cards */}
+        {/* Feature cards
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 md:mt-16">
           {[{
           icon: <Brain size={24} />,
@@ -62,7 +62,7 @@ const HeroSection = () => {
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>
             </div>)}
-        </div>
+        </div> */}
       </div>
     </section>;
 };
