@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       title: "Elevator Pitch",
       category: "Challenge 1",
       description: "Here’s our elevator pitch introducing our names, country, interests, and a fun fact. We shared our passions, why we care about these issues, our goals for solving them, and the unique contributions each of us brings to the team.",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.ibb.co/ksxTjvpx/Whats-App-Image-2025-03-10-at-21-30-03-3932b873.jpg",
       status: "Completed",
       youtubeLink: "https://youtu.be/7Ig1g720uXI?si=RVRvvm-0bFJVUwr0"
     },
@@ -37,23 +37,23 @@ const ProjectsSection = () => {
       title: "Discover Africa",
       category: "Challenge 2",
       description: "For this challenge, The Visionary Executors uncovered and shared the story of the Emptiest Country, Namibia, through our interview radio channel. We explored fascinating facts about Namibia, addressed common misconceptions, highlighted its uniqueness, and discussed the challenges facing this great country.",
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.ibb.co/5g5Yzdqx/Whats-App-Image-2025-03-10-at-21-30-02-9c564e11.jpg",
       status: "Completed",
       youtubeLink: "https://youtu.be/KULJWaZuD4k?si=CcmqdnPuWYyAxW9u"
     },
     {
       title: "Help Lab",
       category: "Challenge 3",
-      description: "Creating impact in the community is an essential part of E-lab. For Challenge 3, Sorwazini engaged in Help-Lab. In this challenge, we made a significant impact on the students at St. Rita Primary School by educating them in digital literacy and conducting extracurricular activities.",
-      image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      description: "Creating impact in the community is an essential part of E-lab. For Challenge 3, Visionary Executors engaged in Help-Lab. In this challenge, we made a significant impact on the students at ECD NKIWIHOREZE KIBONDO School by conducting extracurricular activities and connecting with the students.",
+      image: "https://i.ibb.co/JWxdGzq6/Modern-Top-10-Shocking-Moments-Youtube-Thumbnail.png",
       status: "Completed",
       youtubeLink: "https://youtu.be/_gGBU3PSc6Y?si=usGN182E4E3-Rrsm"
     },
     {
       title: "Hunt for Tressure",
       category: "Challenge 4",
-      description: "Our quest for valuable resources led us to I.D.A. Technology, a company specializing in Information Development for Africa. We conducted a virtual interview with CTO Mr. Telesphore Tuganimana, exploring their solutions and alignment with our goals. Here, we highlight key moments from the interview and reflect on how our findings deepen our understanding of the challenges we aim to address",
-      image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      description: "Our quest for valuable resources led us to UMURAVA, a digital platform to link people with employers or helping the company to get qualified workers, exploring their solutions and alignment with our goals. Here, we highlight key moments from the interview and reflect on how our findings deepen our understanding of the challenges we aim to address",
+      image: "https://i.ibb.co/S7MVpkY4/Modern-Top-10-Shocking-Moments-Youtube-Thumbnail.png",
       status: "Completed",
       youtubeLink: "https://youtu.be/z1clAZhVQTI"
     },
@@ -61,7 +61,7 @@ const ProjectsSection = () => {
       title: "Mission Voyage",
       category: "Challenge 5",
       description: "In this challenge, we assumed a $10,000 grant was available, and we developed a compelling proposal and application to secure the funding for our project. The video briefly introduces us and describes the situation we're tackling, our mission and problem statement, a research analysis, our project idea, its impact, and why we deserve the grant.",
-      image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.ibb.co/S7MVpkY4/Modern-Top-10-Shocking-Moments-Youtube-Thumbnail.png",
       status: "Completed",
       youtubeLink: "http://google.com"
     },
@@ -71,7 +71,7 @@ const ProjectsSection = () => {
       description: "The website highlights our E-Lab experience, featuring a clear mission statement and an articulate problem statement alongside our proposed solutions. It features think tank members' profiles and documents all six E-Lab challenges, capturing the essence of our collaborative journey and innovative solutions.",
       image: "https://i.ibb.co/p6vV6X8p/image.png",
       status: "Ongoing",
-      youtubeLink: "https://www.youtube.com/"
+      youtubeLink: "https://v-ex.netlify.app/"
     }
   ];
 
@@ -147,7 +147,7 @@ const ProjectsSection = () => {
                     className="w-full button-hover"
                     onClick={() => handleLearnMoreClick(project.youtubeLink)}
                   >
-                    Learn More <ArrowRight size={14} className="ml-2" />
+                    View <ArrowRight size={14} className="ml-2" />
                   </Button>
                 </div>
               </div>

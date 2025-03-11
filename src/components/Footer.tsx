@@ -15,18 +15,18 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           <div>
             <Link to="/" className="text-2xl font-bold flex items-center mb-6">
-              <span className="gradient-text font-display tracking-tight">ThinkTank</span>
+              <span className="gradient-text font-display tracking-tight">Visionary Executors</span>
             </Link>
             
             <p className="text-muted-foreground mb-6">
-              An innovation hub at African Leadership University dedicated to solving complex challenges through interdisciplinary collaboration.
+              Empowering style expression through outfit design, fostering creative jobs, and building a designer community.
             </p>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['About Us', 'Our Projects', 'Research', 'Team', 'Partnerships'].map((item) => (
+              {['About Us', 'E-Lab Challenges', 'Prototype', 'Gallery'].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-muted-foreground hover:text-foreground flex items-center group">
                     <ChevronRight size={16} className="mr-2 text-primary opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
@@ -40,7 +40,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Focus Areas</h4>
             <ul className="space-y-3">
-              {['Healthcare Innovation', 'Sustainable Agriculture', 'Clean Energy', 'EdTech Solutions', 'Urban Development'].map((item) => (
+              {['Artisans', 'Fashion Designers', 'Shoe Makers', 'Designers'].map((item) => (
                 <li key={item}>
                   <a href="#" className="text-muted-foreground hover:text-foreground flex items-center group">
                     <ChevronRight size={16} className="mr-2 text-primary opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
@@ -54,16 +54,16 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6">Stay Connected</h4>
             <p className="text-muted-foreground mb-6">
-              Subscribe to our newsletter for updates on projects, events, and opportunities.
+              Subscribe to our newsletter for updates on this project updates, events, and opportunities.
             </p>
             
             <div className="flex">
-              <input 
+              <input
                 type="email" 
                 placeholder="Your email address" 
-                className="bg-white/70 px-4 py-2 rounded-l-lg border border-white/30 focus:outline-none focus:border-primary"
+                className="bg-white/70 px-1 py-2 rounded-l-lg border border-white/30 focus:outline-none focus:border-primary"
               />
-              <button className="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-primary/90 transition-colors">
+              <button className="bg-primary text-white px-1 py-2 rounded-r-lg hover:bg-primary/90 transition-colors">
                 Subscribe
               </button>
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © {new Date().getFullYear()} ThinkTank Project, African Leadership University. All rights reserved.
+            © {new Date().getFullYear()} Visionary Executors, African Leadership University. All rights reserved.
           </p>
           
           <div className="flex space-x-6">

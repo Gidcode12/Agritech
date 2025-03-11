@@ -1,5 +1,5 @@
 
-import { Users, Heart, AlertCircle, Rocket, Lightbulb, Users2, Globe, Github, Linkedin, Mail } from "lucide-react";
+import { Users, Heart, AlertCircle, Rocket, Lightbulb, Users2, Globe, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -36,8 +36,9 @@ const AboutTabs = () => {
       role: "Team Lead",
       image: "https://i.ibb.co/fdhFfsSb/ogoo.jpg",
       socials: [
-        { type: "github", url: "https://github.com/" },
-        { type: "linkedin", url: "https://linkedin.com/" }
+        { type: "instagram", url: "https://instagram.com/" },
+        // { type: "github", url: "https://github.com/" },
+        { type: "mail", url: "mailto:n@alustudent.com" }
       ]
     },
     {
@@ -45,8 +46,9 @@ const AboutTabs = () => {
       role: "Reporter/Presenter",
       image: "https://i.ibb.co/5gkPML8Q/al.png",
       socials: [
-        { type: "github", url: "https://github.com/" },
-        { type: "linkedin", url: "https://linkedin.com/" }
+        { type: "instagram", url: "https://instagram.com/" },
+        // { type: "github", url: "https://github.com/" },
+        { type: "mail", url: "mailto:n@alustudent.com" }
       ]
     },
     {
@@ -54,8 +56,9 @@ const AboutTabs = () => {
       role: "Communication Lead",
       image: "https://i.ibb.co/21538QQb/celyse.png",
       socials: [
-        { type: "github", url: "https://github.com/" },
-        { type: "linkedin", url: "https://linkedin.com/" }
+        { type: "instagram", url: "https://instagram.com/" },
+        // { type: "github", url: "https://github.com/" },
+        { type: "mail", url: "mailto:n@alustudent.com" }
       ]
     },
     {
@@ -63,9 +66,10 @@ const AboutTabs = () => {
       role: "Research Lead",
       image: "https://i.ibb.co/YF8pcWjb/matt.jpg",
       socials: [
-        { type: "github", url: "https://github.com/" },
-        { type: "linkedin", url: "https://linkedin.com/" },
-        { type: "mail", url: "mailto:example@example.com" }
+        { type: "instagram", url: "https://instagram.com/" },
+        // { type: "github", url: "https://github.com/" },
+        // { type: "mail", url: "mailto:n@alustudent.com" },
+        { type: "mail", url: "mailto:n@alustudent.com" }
       ]
     },
     {
@@ -73,9 +77,9 @@ const AboutTabs = () => {
       role: "Design Lead",
       image: "https://i.ibb.co/YFm5z0Rp/ERIOLUWA-1.png",
       socials: [
-        { type: "github", url: "https://github.com/" },
-        { type: "linkedin", url: "https://linkedin.com/" },
-        { type: "mail", url: "mailto:sarah@example.com" }
+        { type: "instagram", url: "https://instagram.com/" },
+        // { type: "github", url: "https://github.com/" },
+        { type: "mail", url: "mailto:n@alustudent.com" }
       ]
     }
   ];
@@ -137,6 +141,7 @@ const AboutTabs = () => {
                           {social.type === "github" && <Github className="w-5 h-5" />}
                           {social.type === "linkedin" && <Linkedin className="w-5 h-5" />}
                           {social.type === "mail" && <Mail className="w-5 h-5" />}
+                          {social.type === "instagram" && <Instagram className="w-5 h-5" />}
                         </a>
                       ))}
                     </div>
@@ -154,7 +159,7 @@ const AboutTabs = () => {
                           src={member.image} 
                           alt={member.name} 
                           className="w-full h-full object-cover"
-                        />
+                          />
                       </div>
                     </div>
                     <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
@@ -162,15 +167,16 @@ const AboutTabs = () => {
                     <div className="flex justify-center gap-3">
                       {member.socials.map((social, sIndex) => (
                         <a 
-                          key={sIndex} 
-                          href={social.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="text-gray-400 hover:text-primary transition-colors"
+                        key={sIndex} 
+                        href={social.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-gray-400 hover:text-primary transition-colors"
                         >
                           {social.type === "github" && <Github className="w-5 h-5" />}
                           {social.type === "linkedin" && <Linkedin className="w-5 h-5" />}
                           {social.type === "mail" && <Mail className="w-5 h-5" />}
+                          {social.type === "instagram" && <Instagram className="w-5 h-5" />}
                         </a>
                       ))}
                     </div>
