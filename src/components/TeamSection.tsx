@@ -106,22 +106,22 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
-      {/* Modern background elements */}
+    <section id="team" className="py-12 md:py-16 relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
+      {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -bottom-20 right-20 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute -top-20 left-20 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl" />
       </div>
       
       <div className="section-container relative z-10">
-        <div className={`text-center max-w-3xl mx-auto mb-10 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className={`text-center max-w-3xl mx-auto mb-6 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
+          <h2 className="text-4xl md:text-5xl font-bold">
             Gallery
           </h2>
         </div>
         
         {/* Navigation buttons */}
-        <div className="flex justify-end gap-2 mb-4 px-4 md:px-8">
+        <div className="flex justify-end gap-2 mb-2 px-4 md:px-8">
           <Button 
             onClick={scrollLeft} 
             variant="outline" 
@@ -140,17 +140,17 @@ const TeamSection = () => {
           </Button>
         </div>
         
-        {/* Modern collage gallery with masonry-style grid */}
+        {/* Tighter collage gallery with smaller gaps */}
         <div 
           ref={galleryRef}
           className={`
-            grid grid-flow-col auto-cols-max gap-4 px-4 md:px-8
-            overflow-x-auto pb-8 snap-x snap-mandatory
+            grid grid-flow-col auto-cols-max gap-[10px] px-4 md:px-8
+            overflow-x-auto pb-4 pt-1 snap-x snap-mandatory
             scrollbar-hide scroll-smooth
             ${isVisible ? 'animate-fade-in' : 'opacity-0'}
           `}
           style={{ 
-            gridTemplateRows: 'repeat(3, minmax(100px, auto))',
+            gridTemplateRows: 'repeat(3, minmax(80px, auto))',
             scrollbarWidth: 'none',
             msOverflowStyle: 'none'
           }}
@@ -159,10 +159,10 @@ const TeamSection = () => {
             <div 
               key={i} 
               className={`
-                group snap-start transform transition-all duration-500 hover:translate-y-[-5px]
-                overflow-hidden rounded-xl relative shadow-lg
-                ${item.size === 'large' ? 'row-span-3 w-[280px] h-[420px]' : 
-                  item.size === 'medium' ? 'row-span-2 w-[240px] h-[280px]' : 'row-span-1 w-[200px] h-[200px]'}
+                group snap-start transform transition-all duration-300 hover:translate-y-[-3px]
+                overflow-hidden rounded-md relative shadow-md
+                ${item.size === 'large' ? 'row-span-3 w-[190px] h-[290px]' : 
+                  item.size === 'medium' ? 'row-span-2 w-[160px] h-[190px]' : 'row-span-1 w-[140px] h-[140px]'}
               `}
               style={{
                 gridColumnStart: 'auto',
@@ -172,12 +172,12 @@ const TeamSection = () => {
               <img 
                 src={item.image} 
                 alt={item.caption}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out 
+                className="w-full h-full object-cover transition-transform duration-500 ease-out 
                          group-hover:scale-[1.05]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
                             opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="absolute bottom-3 left-4 right-4 text-white text-sm font-medium">
+                <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
                   {item.caption}
                 </p>
               </div>
@@ -185,8 +185,8 @@ const TeamSection = () => {
           ))}
         </div>
         
-        {/* Modern scroll indicator dots */}
-        <div className="flex justify-center gap-2 mt-6">
+        {/* Scroll indicator dots */}
+        <div className="flex justify-center gap-2 mt-3">
           {[...Array(3)].map((_, i) => (
             <div 
               key={i} 
