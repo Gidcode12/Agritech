@@ -36,9 +36,9 @@ const AboutTabs = () => {
       role: "Team Lead",
       image: "https://i.ibb.co/fdhFfsSb/ogoo.jpg",
       socials: [
-        { type: "instagram", url: "https://instagram.com/" },
+        { type: "instagram", url: "https://www.instagram.com/the.zion.illustrator/" },
         // { type: "github", url: "https://github.com/" },
-        { type: "mail", url: "mailto:n@alustudent.com" }
+        { type: "mail", url: "mailto:c.jonnwakal@alustudent.com" }
       ]
     },
     {
@@ -46,9 +46,9 @@ const AboutTabs = () => {
       role: "Reporter/Presenter",
       image: "https://i.ibb.co/5gkPML8Q/al.png",
       socials: [
-        { type: "instagram", url: "https://instagram.com/" },
+        { type: "instagram", url: "https://www.instagram.com/alima_umwiza/" },
         // { type: "github", url: "https://github.com/" },
-        { type: "mail", url: "mailto:n@alustudent.com" }
+        { type: "mail", url: "mailto:a.umwiza@alustudent.com" }
       ]
     },
     {
@@ -56,9 +56,9 @@ const AboutTabs = () => {
       role: "Communication Lead",
       image: "https://i.ibb.co/21538QQb/celyse.png",
       socials: [
-        { type: "instagram", url: "https://instagram.com/" },
+        { type: "instagram", url: "https://www.instagram.com/c.e.l.y.s.e_02/" },
         // { type: "github", url: "https://github.com/" },
-        { type: "mail", url: "mailto:n@alustudent.com" }
+        { type: "mail", url: "mailto:c.ishimwe9@alustudent.com" }
       ]
     },
     {
@@ -66,10 +66,10 @@ const AboutTabs = () => {
       role: "Research Lead",
       image: "https://i.ibb.co/YF8pcWjb/matt.jpg",
       socials: [
-        { type: "instagram", url: "https://instagram.com/" },
+        { type: "instagram", url: "https://www.instagram.com/_billionairementor2020/" },
         // { type: "github", url: "https://github.com/" },
         // { type: "mail", url: "mailto:n@alustudent.com" },
-        { type: "mail", url: "mailto:n@alustudent.com" }
+        { type: "mail", url: "mailto:m.avhiokhod@alustudent.com" }
       ]
     },
     {
@@ -77,9 +77,9 @@ const AboutTabs = () => {
       role: "Design Lead",
       image: "https://i.ibb.co/YFm5z0Rp/ERIOLUWA-1.png",
       socials: [
-        { type: "instagram", url: "https://instagram.com/" },
+        { type: "instagram", url: "https://www.instagram.com/erioluwa_olowoyo/" },
         // { type: "github", url: "https://github.com/" },
-        { type: "mail", url: "mailto:n@alustudent.com" }
+        { type: "mail", url: "mailto:e.olowoyo@alustudent.com" }
       ]
     }
   ];
