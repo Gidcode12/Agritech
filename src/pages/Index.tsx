@@ -51,7 +51,7 @@ const Index = () => {
         <ProjectsSection />
         <PrototypeSection />
         <TeamSection />
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
       <Footer />
     </div>

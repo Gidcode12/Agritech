@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -50,7 +51,7 @@ const Navbar = () => {
           {navLinks.map(link => <a key={link.label} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground link-underline transition-colors">
               {link.label}
             </a>)}
-          <Button className="button-hover">Join Us</Button>
+          <Button className="button-hover">Contact Us</Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -65,7 +66,7 @@ const Navbar = () => {
                 {navLinks.map(link => <a key={link.label} href={link.href} onClick={toggleMenu} className="text-xl font-medium py-2 hover:text-primary transition-colors">
                     {link.label}
                   </a>)}
-                <Button className="mt-4 button-hover" onClick={toggleMenu}>Join Us</Button>
+                <Button className="mt-4 button-hover" onClick={toggleMenu}>Contact Us</Button>
               </nav>
               <button onClick={toggleMenu} className="absolute top-6 right-6 text-foreground p-2 rounded-full hover:bg-secondary transition-colors" aria-label="Close menu">
                 <X size={24} />
