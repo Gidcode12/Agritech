@@ -1,8 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 
 const TeamSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -88,39 +86,56 @@ const TeamSection = () => {
         <div className="absolute -top-20 left-20 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl" />
       </div>
       
-      <div className="section-container relative z-10">
-        <div className={`text-center max-w-3xl mx-auto mb-6 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
-          <h2 className="text-4xl md:text-5xl font-bold">
+      <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className={`text-center max-w-3xl mx-auto mb-3 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-2">
             Gallery
           </h2>
+          <p className="text-muted-foreground text-lg">
+            Memorable experiences. From milestones to everyday interactions and fun moments.
+          </p>
         </div>
         
-        {/* Masonry layout gallery */}
+        {/* Horizontal scrolling masonry gallery */}
         <div 
-          ref={galleryRef}
-          className={`columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 px-4 md:px-8 mx-auto
+          className={`w-full overflow-x-auto pb-4 scrollbar-hide
             ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
         >
-          {galleryItems.map((item, i) => (
-            <div 
-              key={i} 
-              className="break-inside-avoid mb-4 group"
-            >
-              <div className="relative overflow-hidden rounded-lg shadow-md transform transition-transform duration-300 hover:-translate-y-1">
-                <img 
-                  src={item.image} 
-                  alt={item.caption}
-                  className="h-auto max-w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
-                              opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
-                    {item.caption}
-                  </p>
+          <div 
+            ref={galleryRef}
+            className="flex gap-2.5 min-w-max" 
+            style={{ paddingBottom: '10px' }}
+          >
+            {galleryItems.map((item, i) => {
+              // Decide random height for images to create masonry effect
+              const heightClass = i % 3 === 0 
+                ? "h-[250px]" 
+                : i % 3 === 1 
+                  ? "h-[350px]" 
+                  : "h-[300px]";
+                
+              return (
+                <div 
+                  key={i} 
+                  className={`shrink-0 ${heightClass} w-[280px] group`}
+                >
+                  <div className="relative h-full overflow-hidden rounded-lg shadow-md transform transition-transform duration-300 hover:-translate-y-1">
+                    <img 
+                      src={item.image} 
+                      alt={item.caption}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
+                                  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
+                        {item.caption}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
