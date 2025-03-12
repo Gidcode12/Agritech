@@ -25,7 +25,7 @@ const Navbar = () => {
     label: 'Challenges',
     href: '#projects'
   }, {
-    label: 'Team',
+    label: 'Gallery',
     href: '#team'
   }, {
     label: 'Contact',
