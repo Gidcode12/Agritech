@@ -96,45 +96,66 @@ const TeamSection = () => {
           </p>
         </div>
         
-        {/* Horizontal scrolling masonry gallery */}
+        {/* Horizontal scrolling two-layer masonry gallery */}
         <div 
           className={`w-full overflow-x-auto pb-4 scrollbar-hide
             ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
         >
           <div 
             ref={galleryRef}
-            className="flex gap-2.5 min-w-max" 
+            className="min-w-max px-1" 
             style={{ paddingBottom: '10px' }}
           >
-            {galleryItems.map((item, i) => {
-              // Decide random height for images to create masonry effect
-              const heightClass = i % 3 === 0 
-                ? "h-[250px]" 
-                : i % 3 === 1 
-                  ? "h-[350px]" 
-                  : "h-[300px]";
-                
-              return (
-                <div 
-                  key={i} 
-                  className={`shrink-0 ${heightClass} w-[280px] group`}
-                >
-                  <div className="relative h-full overflow-hidden rounded-lg shadow-md transform transition-transform duration-300 hover:-translate-y-1">
-                    <img 
-                      src={item.image} 
-                      alt={item.caption}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
-                                  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
-                        {item.caption}
-                      </p>
+            {/* Two-row masonry layout */}
+            <div className="flex flex-col gap-2.5">
+              {/* Top row */}
+              <div className="flex gap-2.5">
+                {galleryItems.slice(0, galleryItems.length / 2).map((item, i) => (
+                  <div 
+                    key={`top-${i}`} 
+                    className="shrink-0 h-[180px] w-[280px] group"
+                  >
+                    <div className="relative h-full overflow-hidden rounded-lg shadow-md transform transition-transform duration-300 hover:-translate-y-1">
+                      <img 
+                        src={item.image} 
+                        alt={item.caption}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
+                          {item.caption}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                ))}
+              </div>
+              
+              {/* Bottom row */}
+              <div className="flex gap-2.5">
+                {galleryItems.slice(galleryItems.length / 2).map((item, i) => (
+                  <div 
+                    key={`bottom-${i}`} 
+                    className="shrink-0 h-[220px] w-[280px] group"
+                  >
+                    <div className="relative h-full overflow-hidden rounded-lg shadow-md transform transition-transform duration-300 hover:-translate-y-1">
+                      <img 
+                        src={item.image} 
+                        alt={item.caption}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent 
+                                    opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="absolute bottom-2 left-2 right-2 text-white text-xs font-medium">
+                          {item.caption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
