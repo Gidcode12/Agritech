@@ -35,9 +35,6 @@ const Navbar = () => {
   }, {
     label: 'Gallery',
     href: '#team'
-  }, {
-    label: 'Contact',
-    href: '#contact'
   }];
 
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-apple ${scrolled ? 'py-4 bg-white/80 backdrop-blur-xl border-b border-black/5 shadow-sm' : 'py-6 bg-transparent'}`}>
@@ -51,7 +48,9 @@ const Navbar = () => {
           {navLinks.map(link => <a key={link.label} href={link.href} className="text-sm font-medium text-muted-foreground hover:text-foreground link-underline transition-colors">
               {link.label}
             </a>)}
-          <Button className="button-hover">Contact Us</Button>
+          <Button className="button-hover" asChild>
+            <a href="#contact">Contact Us</a>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -66,7 +65,9 @@ const Navbar = () => {
                 {navLinks.map(link => <a key={link.label} href={link.href} onClick={toggleMenu} className="text-xl font-medium py-2 hover:text-primary transition-colors">
                     {link.label}
                   </a>)}
-                <Button className="mt-4 button-hover" onClick={toggleMenu}>Contact Us</Button>
+                <Button className="mt-4 button-hover" asChild onClick={toggleMenu}>
+                  <a href="#contact">Contact Us</a>
+                </Button>
               </nav>
               <button onClick={toggleMenu} className="absolute top-6 right-6 text-foreground p-2 rounded-full hover:bg-secondary transition-colors" aria-label="Close menu">
                 <X size={24} />
