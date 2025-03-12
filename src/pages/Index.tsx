@@ -49,8 +49,8 @@ const Index = () => {
         <AboutTabs />
         {/* <AboutSection /> */}
         <ProjectsSection />
-        <PrototypeSection />
         <TeamSection />
+        <PrototypeSection />
         <ContactSection />
       </main>
       <Footer />
