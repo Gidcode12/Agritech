@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
@@ -12,9 +14,11 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   const navLinks = [{
     label: 'Home',
     href: '#hero'
@@ -25,12 +29,16 @@ const Navbar = () => {
     label: 'Challenges',
     href: '#projects'
   }, {
+    label: 'Prototype',
+    href: '#prototype'
+  }, {
     label: 'Gallery',
     href: '#team'
   }, {
     label: 'Contact',
     href: '#contact'
   }];
+
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-apple ${scrolled ? 'py-4 bg-white/80 backdrop-blur-xl border-b border-black/5 shadow-sm' : 'py-6 bg-transparent'}`}>
       <div className="section-container flex items-center justify-between py-0">
         <Link to="/" className="text-xl md:text-2xl font-bold flex items-center opacity-90 hover:opacity-100 transition-opacity">
@@ -67,4 +75,5 @@ const Navbar = () => {
       </div>
     </header>;
 };
+
 export default Navbar;
