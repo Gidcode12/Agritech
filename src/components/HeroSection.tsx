@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { ArrowRight, Plant, Sprout, Sun } from 'lucide-react';
+import { ArrowRight, Leaf, Sprout, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -20,7 +20,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className={`space-y-6 ${isLoaded ? 'fade-in' : 'opacity-0'}`}>
             <div className="highlight-badge">
-              <Plant className="h-3 w-3 mr-1" />
+              <Leaf className="h-3 w-3 mr-1" />
               <span>Sustainable Agriculture</span>
             </div>
             
