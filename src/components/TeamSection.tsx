@@ -29,70 +29,70 @@ const TeamSection = () => {
   // Gallery items with images of varying aspect ratios
   const galleryItems = [
     {
-      image: "https://i.ibb.co/fdhFfsSb/ogoo.jpg",
-      caption: "Team brainstorming session"
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027",
+      caption: "Wildlife conservation near farmland"
     },
     {
-      image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=2070&auto=format&fit=crop",
-      caption: "Planning our next move"
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      caption: "Sunrise over the wheat fields"
     },
     {
-      image: "https://i.ibb.co/21538QQb/celyse.png",
-      caption: "Design thinking workshop"
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      caption: "Farmers planning crop rotation"
     },
     {
-      image: "https://i.ibb.co/YF8pcWjb/matt.jpg",
-      caption: "Coding marathon"
+      image: "https://images.unsplash.com/photo-1465379944081-7f47de8d74ac",
+      caption: "Livestock integration in agriculture"
     },
     {
-      image: "https://i.ibb.co/YFm5z0Rp/ERIOLUWA-1.png",
-      caption: "Project review meeting"
+      image: "https://images.unsplash.com/photo-1464093515883-ec948246accb",
+      caption: "Sustainable farming techniques"
     },
     {
-      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1350&auto=format&fit=crop",
-      caption: "Team building activity"
+      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef",
+      caption: "Community harvest celebration"
     },
     {
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1350&auto=format&fit=crop",
-      caption: "Working remotely together"
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+      caption: "Agricultural training workshop"
     },
     {
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1350&auto=format&fit=crop",
-      caption: "Collaborative problem-solving"
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      caption: "Water conservation measures"
     },
     {
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&auto=format&fit=crop",
-      caption: "Tech infrastructure planning"
+      image: "https://images.unsplash.com/photo-1493962853295-0fd70327578a",
+      caption: "Rural community engagement"
     },
     {
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop",
-      caption: "Remote work setup"
+      image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86",
+      caption: "Agroforestry implementation"
     },
     {
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop",
-      caption: "Research and development"
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
+      caption: "Organic certification preparation"
     },
     {
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop",
-      caption: "Hardware exploration"
+      image: "https://images.unsplash.com/photo-1508349937151-22b68b72d5b1",
+      caption: "Technology transfer to smallholder farmers"
     }
   ];
 
   return (
-    <section id="team" className="py-12 md:py-16 relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
+    <section id="team" className="py-12 md:py-16 relative overflow-hidden bg-gradient-to-b from-green-50 to-green-100/30">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -bottom-20 right-20 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute -top-20 left-20 w-[400px] h-[400px] bg-blue-400/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-20 right-20 w-[500px] h-[500px] bg-green-200/30 rounded-full blur-3xl" />
+        <div className="absolute -top-20 left-20 w-[400px] h-[400px] bg-yellow-100/30 rounded-full blur-3xl" />
       </div>
       
       <div className="relative z-10 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className={`text-center max-w-3xl mx-auto mb-3 opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-2">
-            Gallery
+            Our Gallery
           </h2>
           <p className="text-muted-foreground text-lg">
-            Memorable experiences. From milestones to everyday interactions and fun moments.
+            Capturing our work in sustainable agriculture and the communities we serve.
           </p>
         </div>
         

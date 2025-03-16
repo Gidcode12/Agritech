@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles, Scissors, Users, Palette, Globe, Check } from 'lucide-react';
+import { ArrowRight, Sprout, Leaf, TreeDeciduous, Tractor, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const PrototypeSection = () => {
@@ -27,24 +27,24 @@ const PrototypeSection = () => {
 
   const features = [
     {
-      icon: <Palette size={24} />,
-      title: "Custom Design Interface",
-      description: "Intuitive drag-and-drop tools for creating unique fashion pieces that reflect personal style."
+      icon: <Leaf size={24} />,
+      title: "Precision Farming",
+      description: "Smart sensors and analytics to optimize water, fertilizer, and pest management for each crop's specific needs."
     },
     {
-      icon: <Users size={24} />,
-      title: "Skilled Professional Network",
-      description: "Connect with talented designers, tailors, and artisans who bring designs to life."
+      icon: <TreeDeciduous size={24} />,
+      title: "Farmer Network",
+      description: "Connect with experienced agriculturists, agronomists, and fellow farmers for knowledge sharing."
     },
     {
-      icon: <Scissors size={24} />,
-      title: "Production Matching",
-      description: "Smart algorithms pair designs with the perfect craftspeople based on skills and specialization."
+      icon: <Sprout size={24} />,
+      title: "Resource Efficiency",
+      description: "AI-driven recommendations to reduce resource waste while improving crop quality and yields."
     },
     {
-      icon: <Globe size={24} />,
-      title: "Global Impact",
-      description: "Creating economic opportunities while enabling sustainable, on-demand fashion production."
+      icon: <Tractor size={24} />,
+      title: "Market Access",
+      description: "Direct connections to buyers, reducing intermediaries and improving farmer income."
     }
   ];
 
@@ -52,23 +52,23 @@ const PrototypeSection = () => {
     <section id="prototype" className="py-24 md:py-32 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-100 rounded-full blur-3xl opacity-20" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-green-100 rounded-full blur-3xl opacity-20" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-100 rounded-full blur-3xl" />
       </div>
       
       <div className="section-container relative z-10">
         <div className={`text-center max-w-3xl mx-auto mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
-            <Sparkles size={16} className="mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-600 mb-4">
+            <Sprout size={16} className="mr-2" />
             <span className="text-sm font-medium">Our Innovative Solution</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Introducing <span className="gradient-text">DreamWear</span>
+            Introducing <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">FarmConnect</span>
           </h2>
           
           <p className="text-lg text-muted-foreground">
-            An innovative online platform that empowers users to design their own outfits while creating job opportunities for fashion designers, tailors, and artisans.
+            A comprehensive digital platform that empowers farmers with precision agriculture tools, weather analytics, and market access while promoting sustainable farming practices.
           </p>
         </div>
         
@@ -77,24 +77,24 @@ const PrototypeSection = () => {
           {/* Left side with description */}
           <div className={`space-y-6 ${isVisible ? 'animate-fade-up animation-delay-200' : 'opacity-0'}`}>
             <p className="text-lg">
-              DreamWear merges cutting-edge technology with the artistry of fashion design, allowing users to bring their unique style visions to life through an intuitive drag-and-drop interface.
+              FarmConnect combines cutting-edge technology with agricultural expertise, allowing farmers to make data-driven decisions for improved crop management and sustainable practices.
             </p>
             
             <p className="text-lg">
-              This platform not only enhances user creativity but also fosters a community of skilled professionals who can turn these designs into reality.
+              This platform not only enhances farming efficiency but also creates a supportive community that helps farmers adapt to changing climate conditions and market demands.
             </p>
             
             <div className="pt-4">
               <h3 className="text-xl font-bold mb-4">Key Benefits:</h3>
               <ul className="space-y-3">
                 {[
-                  "Democratizes fashion design for everyone",
-                  "Creates sustainable income for skilled artisans",
-                  "Reduces fashion waste through on-demand production",
-                  "Builds global communities around shared creativity"
+                  "Increased crop yields and quality through precision agriculture",
+                  "Reduced water and fertilizer usage with targeted application",
+                  "Higher income through direct market access and price insights",
+                  "Adaptation to climate change through predictive analytics"
                 ].map((benefit, i) => (
                   <li key={i} className="flex items-start">
-                    <Check size={20} className="text-primary mr-2 mt-1 flex-shrink-0" />
+                    <Check size={20} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
                     <span>{benefit}</span>
                   </li>
                 ))}
@@ -102,8 +102,8 @@ const PrototypeSection = () => {
             </div>
             
             <div className="pt-6">
-              <Button className="button-hover group">
-                Learn More About DreamWear
+              <Button className="button-hover group bg-green-600 hover:bg-green-700">
+                Learn More About FarmConnect
                 <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
@@ -111,7 +111,7 @@ const PrototypeSection = () => {
           
           {/* Right side with prototype visualization */}
           <div className={`${isVisible ? 'animate-fade-up animation-delay-400' : 'opacity-0'}`}>
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-primary/5 to-primary/20 p-1">
+            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-green-50 to-green-100 p-1">
               <div className="rounded-xl overflow-hidden bg-white shadow-xl">
                 <div className="h-10 bg-gray-100 flex items-center px-4 border-b">
                   <div className="flex space-x-2">
@@ -122,15 +122,15 @@ const PrototypeSection = () => {
                 </div>
                 <div className="p-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1558191053-8edcb01e1da3?w=800&auto=format&fit=crop" 
-                    alt="DreamWear Platform Interface"
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                    alt="FarmConnect Platform Interface"
                     className="rounded-lg w-full object-cover shadow-sm"
                   />
                 </div>
               </div>
               {/* Design elements */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-blue-400/20 rounded-full"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-green-200/50 rounded-full"></div>
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-200/50 rounded-full"></div>
             </div>
           </div>
         </div>
@@ -144,8 +144,8 @@ const PrototypeSection = () => {
                 isVisible ? `animate-fade-up animation-delay-${(i+5)*100}` : ''
               }`}
             >
-              <div className="bg-primary/10 p-3 rounded-lg inline-block mb-4">
-                <div className="text-primary">{feature.icon}</div>
+              <div className="bg-green-100 p-3 rounded-lg inline-block mb-4">
+                <div className="text-green-600">{feature.icon}</div>
               </div>
               <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
               <p className="text-muted-foreground">{feature.description}</p>

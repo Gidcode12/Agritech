@@ -33,27 +33,27 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 relative overflow-hidden bg-white">
       {/* Background decorations */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] bg-blue-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-green-100 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] bg-yellow-100 rounded-full blur-3xl" />
         <div className="diamond-grid absolute inset-0 opacity-[0.03]" />
       </div>
       
       <div className="section-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           <div className={`opacity-0 ${isVisible ? 'animate-fade-right' : ''}`}>
-            <div className="glass-panel px-4 py-2 rounded-full w-fit mb-4">
-              <span className="text-sm font-medium text-primary/90">Get In Touch</span>
+            <div className="glass-panel px-4 py-2 rounded-full w-fit mb-4 bg-green-50">
+              <span className="text-sm font-medium text-green-600">Get In Touch</span>
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to <span className="gradient-text">Collaborate</span> With Us?
+              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">Transform</span> Your Farm?
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're interested in partnering on a project, joining our team, or learning more about our work, we'd love to hear from you.
+              Whether you're interested in our sustainable farming solutions, agricultural technologies, or community programs, we'd love to hear from you.
             </p>
             
             <div className="space-y-6 mb-8">
@@ -61,19 +61,19 @@ const ContactSection = () => {
                 {
                   icon: <Mail size={24} />,
                   title: "Email Us",
-                  description: "thinktank@alu.edu",
-                  link: "mailto:thinktank@alu.edu"
+                  description: "hello@farmgrowth.org",
+                  link: "mailto:hello@farmgrowth.org"
                 },
                 {
                   icon: <Phone size={24} />,
                   title: "Call Us",
-                  description: "+250 788 123 456",
-                  link: "tel:+250788123456"
+                  description: "+1 (234) 567-8901",
+                  link: "tel:+12345678901"
                 },
                 {
                   icon: <MapPin size={24} />,
                   title: "Visit Us",
-                  description: "African Leadership University, Kigali, Rwanda",
+                  description: "123 Farmland Way, Rural County, Country",
                   link: "#"
                 }
               ].map((item, i) => (
@@ -81,14 +81,14 @@ const ContactSection = () => {
                   key={i} 
                   className={`flex items-start space-x-4 opacity-0 ${isVisible ? `animate-fade-up animation-delay-${(i+3)*100}` : ''}`}
                 >
-                  <div className="bg-primary/10 p-3 rounded-xl text-primary">
+                  <div className="bg-green-100 p-3 rounded-xl text-green-600">
                     {item.icon}
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
                     <a 
                       href={item.link} 
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-green-600 transition-colors"
                     >
                       {item.description}
                     </a>
@@ -99,7 +99,7 @@ const ContactSection = () => {
           </div>
           
           <div className={`opacity-0 ${isVisible ? 'animate-fade-left animation-delay-200' : ''}`}>
-            <div className="glass-panel rounded-2xl p-8 md:p-10 shadow-neo">
+            <div className="glass-panel rounded-2xl p-8 md:p-10 shadow-neo bg-white">
               <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -111,7 +111,7 @@ const ContactSection = () => {
                     <Input 
                       id="name" 
                       placeholder="John Doe" 
-                      className="bg-white/50 border-white/20 focus:border-primary"
+                      className="bg-white/50 border-green-100 focus:border-green-300"
                       required
                     />
                   </div>
@@ -124,7 +124,7 @@ const ContactSection = () => {
                       id="email" 
                       type="email" 
                       placeholder="john@example.com" 
-                      className="bg-white/50 border-white/20 focus:border-primary"
+                      className="bg-white/50 border-green-100 focus:border-green-300"
                       required
                     />
                   </div>
@@ -136,8 +136,8 @@ const ContactSection = () => {
                   </label>
                   <Input 
                     id="subject" 
-                    placeholder="How can we help you?" 
-                    className="bg-white/50 border-white/20 focus:border-primary"
+                    placeholder="How can we help your farm?" 
+                    className="bg-white/50 border-green-100 focus:border-green-300"
                     required
                   />
                 </div>
@@ -148,13 +148,13 @@ const ContactSection = () => {
                   </label>
                   <Textarea 
                     id="message" 
-                    placeholder="Tell us about your inquiry..." 
-                    className="bg-white/50 border-white/20 focus:border-primary min-h-[120px]"
+                    placeholder="Tell us about your agricultural needs..." 
+                    className="bg-white/50 border-green-100 focus:border-green-300 min-h-[120px]"
                     required
                   />
                 </div>
                 
-                <Button type="submit" className="w-full button-hover py-6">
+                <Button type="submit" className="w-full button-hover py-6 bg-green-600 hover:bg-green-700">
                   Send Message <ArrowRight size={16} className="ml-2" />
                 </Button>
               </form>
