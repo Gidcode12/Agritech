@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react';
-import { ArrowRight, Sprout, Leaf, TreeDeciduous } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ArrowRight, Plant, Sprout, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
@@ -10,62 +10,92 @@ const HeroSection = () => {
     setIsLoaded(true);
   }, []);
   
-  return <section id="hero" className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-1/4 left-1/4 w-[300px] h-[300px] bg-yellow-400/20 rounded-full blur-3xl opacity-30" />
-        <div className="diamond-grid absolute inset-0 opacity-[0.03]" />
+  return (
+    <section id="hero" className="relative pt-32 pb-20 overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449')] bg-cover bg-center opacity-10"></div>
       </div>
-
-      <div className="section-container relative z-10 my-0 py-0">
-        <div className="flex flex-col items-center text-center mb-12 md:mb-16">
-          <div className={`glass-panel px-4 py-2 rounded-full mb-6 opacity-0 ${isLoaded ? 'animate-fade-down' : ''}`}>
-            <span className="text-sm font-medium text-green-600">Sustainable Agriculture Initiative</span>
-          </div>
-          
-          <h1 className={`text-4xl md:text-5xl lg:text-7xl font-bold max-w-3xl mb-6 opacity-0 ${isLoaded ? 'animate-fade-up' : ''}`}>
-            Growing the Future, <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">One Seed</span> at a time
-          </h1>
-          
-          <p className={`text-lg md:text-ml text-muted-foreground max-w-2xl mb-8 opacity-0 ${isLoaded ? 'animate-fade-up animation-delay-200' : ''}`}>
-            Empowering farmers with sustainable methods, innovative technologies, and access to resources for improved yields and environmental stewardship.
-          </p>
-          
-          <div className={`flex flex-col sm:flex-row items-center gap-4 opacity-0 ${isLoaded ? 'animate-fade-up animation-delay-300' : ''}`}>
-            <Button size="lg" className="button-hover px-6 py-6 bg-green-600 hover:bg-green-700">
-              Explore Solutions <ArrowRight size={16} className="ml-2" />
-            </Button>
-          </div>
-        </div>
-
-        {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 md:mt-16">
-          {[{
-          icon: <Sprout size={24} />,
-          title: "Sustainable Farming",
-          description: "Promoting eco-friendly agricultural practices for long-term soil health and biodiversity.",
-          delay: "animation-delay-400"
-        }, {
-          icon: <Leaf size={24} />,
-          title: "Knowledge Sharing",
-          description: "Creating platforms for farmers to exchange techniques and agricultural expertise.",
-          delay: "animation-delay-500"
-        }, {
-          icon: <TreeDeciduous size={24} />,
-          title: "Impact Focused",
-          description: "Committed to measurable improvements in crop yields and farmer livelihoods.",
-          delay: "animation-delay-700"
-        }].map((feature, i) => <div key={i} className={`glass-panel rounded-2xl p-8 transform transition-all duration-500 hover:translate-y-[-8px] opacity-0 ${isLoaded ? `animate-fade-up ${feature.delay}` : ''}`}>
-              <div className="bg-green-500/10 p-3 rounded-xl w-fit mb-4 text-green-600">
-                {feature.icon}
+      
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className={`space-y-6 ${isLoaded ? 'fade-in' : 'opacity-0'}`}>
+            <div className="highlight-badge">
+              <Plant className="h-3 w-3 mr-1" />
+              <span>Sustainable Agriculture</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
+              Cultivating <span className="text-gradient">Tomorrow's</span> Harvest Today
+            </h1>
+            
+            <p className="text-lg text-muted-foreground">
+              Empowering farmers with sustainable practices, innovative technologies, and market connections for improved yields and environmental stewardship.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <Button className="group" size="lg">
+                Explore Solutions
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+              <Button variant="outline" size="lg">
+                Learn More
+              </Button>
+            </div>
+            
+            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">25+</p>
+                <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>)}
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">1.2K+</p>
+                <p className="text-sm text-muted-foreground">Farmers Supported</p>
+              </div>
+              <div className="text-center">
+                <p className="text-3xl font-bold text-primary">18</p>
+                <p className="text-sm text-muted-foreground">Countries Reached</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className={`${isLoaded ? 'fade-in' : 'opacity-0'} relative`}>
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-custom-lg">
+              <img 
+                src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2" 
+                alt="Sustainable farming" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+            </div>
+            
+            <div className="absolute -bottom-6 -right-6 bg-primary/10 backdrop-blur-sm border border-primary/20 rounded-xl p-4 shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="bg-primary rounded-full p-2">
+                  <Sprout className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <p className="font-semibold">Eco-Friendly</p>
+                  <p className="text-sm text-muted-foreground">Sustainable Practices</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="absolute -top-6 -left-6 bg-secondary/10 backdrop-blur-sm border border-secondary/20 rounded-xl p-4 shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="bg-secondary rounded-full p-2">
+                  <Sun className="h-6 w-6 text-secondary-foreground" />
+                </div>
+                <div>
+                  <p className="font-semibold">Renewable Energy</p>
+                  <p className="text-sm text-muted-foreground">Solar Powered</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;

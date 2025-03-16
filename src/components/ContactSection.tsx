@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -33,62 +33,57 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 relative overflow-hidden bg-white">
-      {/* Background decorations */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-green-100 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/3 w-[300px] h-[300px] bg-yellow-100 rounded-full blur-3xl" />
-        <div className="diamond-grid absolute inset-0 opacity-[0.03]" />
-      </div>
-      
-      <div className="section-container relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          <div className={`opacity-0 ${isVisible ? 'animate-fade-right' : ''}`}>
-            <div className="glass-panel px-4 py-2 rounded-full w-fit mb-4 bg-green-50">
-              <span className="text-sm font-medium text-green-600">Get In Touch</span>
+    <section id="contact" className="py-24 bg-muted/30">
+      <div className="container-custom">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+          <div className={`lg:col-span-2 ${isVisible ? 'slide-up' : 'opacity-0'}`}>
+            <div className="accent-badge mb-4">
+              <Send className="h-3 w-3 mr-1" />
+              <span>Get In Touch</span>
             </div>
             
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-green-400">Transform</span> Your Farm?
+            <h2 className="section-title">
+              Ready to <span className="text-gradient">Transform</span> Your Farm?
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-8">
-              Whether you're interested in our sustainable farming solutions, agricultural technologies, or community programs, we'd love to hear from you.
+            <p className="section-subtitle mb-10">
+              Whether you're interested in our sustainable farming solutions or community programs, we'd love to hear from you.
             </p>
             
-            <div className="space-y-6 mb-8">
+            <div className="space-y-8">
               {[
                 {
-                  icon: <Mail size={24} />,
+                  icon: <Mail className="h-6 w-6" />,
                   title: "Email Us",
-                  description: "hello@farmgrowth.org",
-                  link: "mailto:hello@farmgrowth.org"
+                  description: "hello@harvesthub.org",
+                  link: "mailto:hello@harvesthub.org"
                 },
                 {
-                  icon: <Phone size={24} />,
+                  icon: <Phone className="h-6 w-6" />,
                   title: "Call Us",
                   description: "+1 (234) 567-8901",
                   link: "tel:+12345678901"
                 },
                 {
-                  icon: <MapPin size={24} />,
+                  icon: <MapPin className="h-6 w-6" />,
                   title: "Visit Us",
-                  description: "123 Farmland Way, Rural County, Country",
+                  description: "123 Farmland Way, Rural County",
                   link: "#"
                 }
               ].map((item, i) => (
                 <div 
                   key={i} 
-                  className={`flex items-start space-x-4 opacity-0 ${isVisible ? `animate-fade-up animation-delay-${(i+3)*100}` : ''}`}
+                  className={`flex items-start ${isVisible ? 'slide-up' : 'opacity-0'}`}
+                  style={{ animationDelay: `${(i+3)*100}ms` }}
                 >
-                  <div className="bg-green-100 p-3 rounded-xl text-green-600">
+                  <div className="feature-icon mr-4">
                     {item.icon}
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
                     <a 
                       href={item.link} 
-                      className="text-muted-foreground hover:text-green-600 transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       {item.description}
                     </a>
@@ -98,12 +93,12 @@ const ContactSection = () => {
             </div>
           </div>
           
-          <div className={`opacity-0 ${isVisible ? 'animate-fade-left animation-delay-200' : ''}`}>
-            <div className="glass-panel rounded-2xl p-8 md:p-10 shadow-neo bg-white">
-              <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
+          <div className={`lg:col-span-3 ${isVisible ? 'slide-up' : 'opacity-0'}`} style={{ animationDelay: '200ms' }}>
+            <div className="card-highlight p-8">
+              <h3 className="text-2xl font-semibold mb-6">Send us a Message</h3>
               
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium">
                       Full Name
@@ -111,7 +106,7 @@ const ContactSection = () => {
                     <Input 
                       id="name" 
                       placeholder="John Doe" 
-                      className="bg-white/50 border-green-100 focus:border-green-300"
+                      className="border-border/50 focus-visible:ring-primary"
                       required
                     />
                   </div>
@@ -124,7 +119,7 @@ const ContactSection = () => {
                       id="email" 
                       type="email" 
                       placeholder="john@example.com" 
-                      className="bg-white/50 border-green-100 focus:border-green-300"
+                      className="border-border/50 focus-visible:ring-primary"
                       required
                     />
                   </div>
@@ -137,7 +132,7 @@ const ContactSection = () => {
                   <Input 
                     id="subject" 
                     placeholder="How can we help your farm?" 
-                    className="bg-white/50 border-green-100 focus:border-green-300"
+                    className="border-border/50 focus-visible:ring-primary"
                     required
                   />
                 </div>
@@ -149,13 +144,14 @@ const ContactSection = () => {
                   <Textarea 
                     id="message" 
                     placeholder="Tell us about your agricultural needs..." 
-                    className="bg-white/50 border-green-100 focus:border-green-300 min-h-[120px]"
+                    className="min-h-[120px] border-border/50 focus-visible:ring-primary"
                     required
                   />
                 </div>
                 
-                <Button type="submit" className="w-full button-hover py-6 bg-green-600 hover:bg-green-700">
-                  Send Message <ArrowRight size={16} className="ml-2" />
+                <Button type="submit" className="w-full group">
+                  Send Message 
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Button>
               </form>
             </div>
